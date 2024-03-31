@@ -1,3 +1,11 @@
+import { Footer, Header } from "@/components/Layout";
+
 export default function Home() {
-  return <div>Home</div>;
+  return (
+    <>
+      <Header />
+      <div>body</div>
+      <Footer />
+    </>
+  )
 }
