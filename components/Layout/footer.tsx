@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { PiTelegramLogoLight } from "react-icons/pi";
 import { FaTwitter } from "react-icons/fa";
 import { FaDiscord } from "react-icons/fa";
@@ -6,6 +5,7 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaMedium } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+
 export default function Footer() {
   return (
     <>

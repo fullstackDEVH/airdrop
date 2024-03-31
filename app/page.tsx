@@ -21,8 +21,8 @@ export default function Home() {
           {/* content */}
           <div className="flex_center">
             <p className="title_content">
-              Bitget Wallet's Ecosystem Token BWB Is Live. Claim Your Airdrop
-              Now!
+              {`Bitget Wallet's Ecosystem Token BWB Is Live. Claim Your Airdrop
+              Now!`}
             </p>
           </div>
 
@@ -48,8 +48,8 @@ export default function Home() {
           {/* tips desc */}
           <div className="mt-[250px]">
             <p className="title_tip_desc text-white">
-              We've issued BWB Points to eligible users of Bitget Wallet and
-              other popular Web3 wallets like Metamask
+              {`We've issued BWB Points to eligible users of Bitget Wallet and
+              other popular Web3 wallets like Metamask`}
             </p>
             <p className="title_tip_desc text-[#00c2b7] underline">
               New users can get started with Bitget Wallet and receive 50 BWB
@@ -170,11 +170,11 @@ export default function Home() {
                 eligibility for future rewards.
               </p>
               <p className="story_container_wrapper_paragraph">
-                Boasting a legacy of over 5 years and a global user base of more
+                {`Boasting a legacy of over 5 years and a global user base of more
                 than 19 million... Bitget Wallet's introduction of BWB marks a
                 significant milestone in its brand lineage. Join us in
                 celebrating Bitget Wallet's innovative products as we continue
-                to unravel exciting plans for ecosystem growth.
+                to unravel exciting plans for ecosystem growth.`}
               </p>
               <p className="story_container_wrapper_paragraph">
                 Our goal is to onboard the next 1 billion users into Web3,

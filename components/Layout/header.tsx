@@ -112,7 +112,7 @@ export default function Header() {
   return (
     <div
       className={`flex items-center justify-between w-full ${
-        mode === "DARK" ? "bg-[#0e0e0e]" : "bg-white"
+        mode === "DARK" ? "bg-header" : "bg-white"
       } text-[#cdccd3] h-16`}
     >
       <div className="w-7/10 flex">
