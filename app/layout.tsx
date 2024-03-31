@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -7,20 +7,16 @@ import { WagmiProvider } from "wagmi";
 
 import { http, createConfig } from "wagmi";
 import { mainnet, sepolia, base } from "wagmi/chains";
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query' 
-import { injected, metaMask, safe, walletConnect } from 'wagmi/connectors'
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { injected, metaMask, safe, walletConnect } from "wagmi/connectors";
+import { Footer, Header } from "@/components/Layout";
 
-const queryClient = new QueryClient() 
-const projectId = '4806c2e3b940cc1156e8262c2edee971'
+const queryClient = new QueryClient();
+const projectId = "4806c2e3b940cc1156e8262c2edee971";
 
- const config = createConfig({
+const config = createConfig({
   chains: [mainnet, base],
-  connectors: [
-    injected(),
-    walletConnect({ projectId }),
-    metaMask(),
-    safe(),
-  ],
+  connectors: [injected(), walletConnect({ projectId }), metaMask(), safe()],
   transports: {
     [mainnet.id]: http(),
     [base.id]: http(),
@@ -28,7 +24,6 @@ const projectId = '4806c2e3b940cc1156e8262c2edee971'
 });
 
 const inter = Inter({ subsets: ["latin"] });
-
 
 export default function RootLayout({
   children,
@@ -39,11 +34,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <WagmiProvider config={config}>
-        <QueryClientProvider client={queryClient}> 
-
-          {children}
-          </QueryClientProvider> 
-          </WagmiProvider>
+          <QueryClientProvider client={queryClient}>
+            <Header />
+            {children}
+            <Footer />
+          </QueryClientProvider>
+        </WagmiProvider>
       </body>
     </html>
   );
