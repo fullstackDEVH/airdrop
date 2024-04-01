@@ -23,10 +23,13 @@ export default function FaqItemMobile({ title, data }: IProps) {
           alt="icon arrow"
           width={20}
           height={20}
+          className={`${
+            active ? "rotate-180" : ""
+          } transition-all`}
         />
       </div>
       <div
-        className={`transition-all ${
+        className={`${
           active ? "scale-100 h-auto" : "scale-0 h-0"
         } origin-top-left`}
       >

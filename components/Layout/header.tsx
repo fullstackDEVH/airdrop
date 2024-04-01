@@ -107,7 +107,7 @@ export default function Header() {
   return (
     <>
       <div
-        className={`flex items-center justify-between w-full px-5 ${
+        className={`flex items-center justify-between w-full px-3 sm:px-5 ${
           mode === "DARK" ? "bg-header" : "bg-white"
         } text-[#cdccd3] h-16`}
       >
@@ -190,13 +190,13 @@ export default function Header() {
         </div>
 
         <div className="">
-          <ul className="flex">
+          <ul className="flex items-center">
             <li>
               <button className={`header_btn_wallet`}>
                 <div className="header_btn_wallet_content">ConnectWallet</div>
               </button>
             </li>
-            <li className="mx-6">
+            <li className="mx-2 sm:mx-6">
               <button className="p-2">
                 <RiInstallLine
                   className={` text-xl p-2${
@@ -216,7 +216,7 @@ export default function Header() {
             </li>
 
             <li
-              className="flex_center ml-6 cursor-pointer"
+              className="flex_center ml-4 sm:ml-6 w-5 h-5 cursor-pointer"
               onClick={() => setVisibleMenuMobile((pre) => !pre)}
             >
               <Image

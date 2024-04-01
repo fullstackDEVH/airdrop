@@ -29,7 +29,7 @@ export default function Home() {
         <div className="max-w-custom mx-auto relative z-30">
           <div className="min-h-[500px] pb-[90px] relative">
             {/* banner mobile */}
-            <div className="absolute w-full top-0 left-1/2 -translate-x-1/2 ">
+            <div className="absolute w-full top-0 left-1/2 -translate-x-1/2 block sm:hidden">
               <Image
                 src="/imgs/bg-mobile.png"
                 alt="icon mobile"
@@ -123,13 +123,13 @@ export default function Home() {
           </div>
 
           {/* box */}
-          <div className="max-w-custom mx-auto px-5 box">
+          <div className="max-w-custom mx-auto px-5 box pb-5 ms:pb-0">
             {/* slash mobile */}
             <div className="hidden"></div>
             {/* list */}
             <div className="relative flex justify-center flex-col sm:flex-row sm:h-[540px]">
               {/* line */}
-              <div className="absolute top-0 bottom-0 left-0 right-0 flex_center gap-8 hidden sm:block">
+              <div className="absolute top-0 bottom-0 left-0 right-0 flex_center gap-8 !hidden sm:!flex">
                 <div className="line_slash w-[200px]"></div>
                 <Image
                   src="/imgs/icon-coin.png"
@@ -154,10 +154,18 @@ export default function Home() {
                 <div className="line_slash w-[200px]"></div>
               </div>
 
+              <div className="air-mod-title airdrop-headline text-center pt-4 block sm:hidden">
+                <p className="line"></p>
+                <h2 className="story_container_wrapper_heading-mobile ">
+                  Time line
+                </h2>
+                <p className="line"></p>
+              </div>
+
               {/* item */}
               <div className="relative h-full">
                 <div className="mt-[63px] box_item_border border rounded-lg overflow-hidden">
-                  <div className="box_item sm:w-[360px]">
+                  <div className="box_item sm:w-[260px] md:w-[360px]">
                     {/* content */}
                     <div className="p-[24px] rounded-lg flex_center flex-col">
                       <div className="box_item_content_time">
@@ -174,7 +182,7 @@ export default function Home() {
               {/* item */}
               <div className="relative sm:pt-[280px]">
                 <div className="mt-[63px] box_item_border border rounded-lg overflow-hidden">
-                  <div className="box_item sm:w-[360px]">
+                  <div className="box_item sm:w-[260px] md:w-[360px]">
                     {/* content */}
                     <div className="p-[24px] rounded-lg flex_center flex-col">
                       <div className="box_item_content_time">Q2</div>
@@ -189,7 +197,7 @@ export default function Home() {
               {/* item */}
               <div className="relative">
                 <div className="mt-[63px] box_item_border border rounded-lg overflow-hidden">
-                  <div className="box_item sm:w-[360px]">
+                  <div className="box_item sm:w-[260px] md:w-[360px]">
                     {/* content */}
                     <div className="p-[24px] rounded-lg flex_center flex-col">
                       <div className="box_item_content_time">Q2</div>

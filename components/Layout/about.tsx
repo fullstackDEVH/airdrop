@@ -47,7 +47,7 @@ export default function About() {
       </div>
 
       <div id="mobile" className="bg-black pl-5 pr-5 hidden">
-        <div className="air-mod-title airdrop-headline text-center">
+        <div className="air-mod-title airdrop-headline text-center pt-4">
           <p className="line"></p>
           <h2 className="story_container_wrapper_heading-mobile ">About BWB</h2>
           <p className="line"></p>

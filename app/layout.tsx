@@ -39,8 +39,6 @@ export default function RootLayout({
           <QueryClientProvider client={queryClient}>
             <Header />
             {children}
-            <About />
-            <FAQ />
             <Footer />
           </QueryClientProvider>
         </WagmiProvider>
