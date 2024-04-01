@@ -7,7 +7,7 @@ export default function FAQ() {
     <>
       <div className="bg-black">
         {/* faq */}
-        <div id="desktop" className="max-w-custom mx-auto bg-black pb-[80px]">
+        <div id="desktop" className="max-w-custom mx-auto sm:bg-black pb-[80px]">
           <h2 className="text-2xl mb-5 text-white">FAQ</h2>
 
           {/* list */}

@@ -1,6 +1,6 @@
 "use client";
 
-import { FaqItem } from "@/components/common";
+import { About, Faq } from "@/components/Layout";
 import Image from "next/image";
 
 export default function Home() {
@@ -203,109 +203,10 @@ export default function Home() {
           </div>
 
           {/* story */}
-          <div className="max-w-custom mx-auto pb-[111px] pt-[150px] box">
-            <div className="story_container relative">
-              <Image
-                src="/imgs/coin_overlay.png"
-                className="absolute right-[36px] top-[-130px]"
-                alt="coin_overlay icon"
-                width={261}
-                height={305}
-              />
-              <div className="story_container_wrapper">
-                <h2 className="story_container_wrapper_heading">About BWB</h2>
-                <h4 className="story_container_wrapper__sub_heading">
-                  Bitget Wallet, a world-leading Web3 wallet, has officially
-                  launched its very own ecosystem token BWB.
-                </h4>
-                <p className="story_container_wrapper_paragraph">
-                  As the foundational asset of the decentralized Bitget Wallet
-                  ecosystem, BWB empowers holders with exclusive benefits,
-                  including governance rights within our communities and
-                  eligibility for future rewards.
-                </p>
-                <p className="story_container_wrapper_paragraph">
-                  {`Boasting a legacy of over 5 years and a global user base of more
-                than 19 million... Bitget Wallet's introduction of BWB marks a
-                significant milestone in its brand lineage. Join us in
-                celebrating Bitget Wallet's innovative products as we continue
-                to unravel exciting plans for ecosystem growth.`}
-                </p>
-                <p className="story_container_wrapper_paragraph">
-                  Our goal is to onboard the next 1 billion users into Web3,
-                  opening the doors to a wealth of new assets and earning
-                  opportunities for all.
-                </p>
-              </div>
-            </div>
-          </div>
+          <About />
 
           {/* faq */}
-          <div className="max-w-custom mx-auto box sm:bg-black pb-[80px]">
-            <h2 className="text-2xl mb-5 text-white">FAQ</h2>
-
-            {/* list */}
-            <FaqItem
-              title={"What are BWB Points ?"}
-              data={[
-                "The BWB airdrop is awarded based on BWB Points. Following the airdrop campaign conclusion, users will be able to convert their BWB Points into BWB tokens.",
-              ]}
-            />
-            <FaqItem
-              title={"Which addresses are eligible for initial BWB Points ?"}
-              data={[
-                "· Retroactive airdrop for Bitget Wallet existing users",
-                "BWB Points are awarded based on a comprehensive assessment of users' Swap transactions, holdings, and participation in platform activities. Connect your wallet to the Bitget Wallet App event page to receive these airdrop points.",
-                "· Airdrop incentives for active on-chain traders",
-                "Airdrop incentives are awarded to users who have completed Swap transactions on prominent Web3 wallets, such as MetaMask, Trust Wallet, Coinbase Wallet, OKX Web3, imToken, Phantom, Rainbow, and TokenPocket. Download the Bitget Wallet App and import your wallet addresses to claim these airdrop points.",
-                "· Fair airdrops for new users",
-                "New users who download the Bitget Wallet App and create their first wallet during the event period will receive 50 BWB Points. These points can be unlocked after users make swap transactions for 3 days (at least $100 each day) within the event period.",
-              ]}
-            />
-            <FaqItem
-              title={"How do I claim my initial BWB Points ?"}
-              data={[
-                "If you find that you are eligible for initial BWB points, simply follow the instructions provided on the page to download the Bitget Wallet App and claim your points. You can accumulate points by participating in upcoming events. These points can be converted into BWB tokens upon event conclusion.",
-              ]}
-            />
-            <FaqItem
-              title={"How do I earn more BWB Points ?"}
-              data={[
-                "You can earn BWB Points daily by participating in various activities on the Bitget Wallet App, including inviting friends, maintaining wallet balance, and completing swap transactions.",
-              ]}
-            />
-
-            {/* input */}
-            <div className="title_box_input">
-              <div className="flex items-center h-[96px] rounded-[80px] bg-primary">
-                <Image
-                  src="/icons/search.svg"
-                  alt="icon search"
-                  width={38}
-                  height={38}
-                  className="ml-[30px]"
-                />
-                <input
-                  type="text"
-                  placeholder="Enter your EVM/Tron /Solana address to check your initial BWB Points"
-                  className="title_input"
-                />
-                <button className="title_box_btn">Check</button>
-              </div>
-            </div>
-
-            {/* tips desc */}
-            <div className="mt-[250px]">
-              <p className="title_tip_desc text-white">
-                {`We've issued BWB Points to eligible users of Bitget Wallet and
-              other popular Web3 wallets like Metamask`}
-              </p>
-              <p className="title_tip_desc text-[#00c2b7] underline">
-                New users can get started with Bitget Wallet and receive 50 BWB
-                Points when they download the app!
-              </p>
-            </div>
-          </div>
+          <Faq />
         </div>
       </div>
     </>
