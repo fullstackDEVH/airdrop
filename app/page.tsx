@@ -274,6 +274,37 @@ export default function Home() {
                 "You can earn BWB Points daily by participating in various activities on the Bitget Wallet App, including inviting friends, maintaining wallet balance, and completing swap transactions.",
               ]}
             />
+
+            {/* input */}
+            <div className="title_box_input">
+              <div className="flex items-center h-[96px] rounded-[80px] bg-primary">
+                <Image
+                  src="/icons/search.svg"
+                  alt="icon search"
+                  width={38}
+                  height={38}
+                  className="ml-[30px]"
+                />
+                <input
+                  type="text"
+                  placeholder="Enter your EVM/Tron /Solana address to check your initial BWB Points"
+                  className="title_input"
+                />
+                <button className="title_box_btn">Check</button>
+              </div>
+            </div>
+
+            {/* tips desc */}
+            <div className="mt-[250px]">
+              <p className="title_tip_desc text-white">
+                {`We've issued BWB Points to eligible users of Bitget Wallet and
+              other popular Web3 wallets like Metamask`}
+              </p>
+              <p className="title_tip_desc text-[#00c2b7] underline">
+                New users can get started with Bitget Wallet and receive 50 BWB
+                Points when they download the app!
+              </p>
+            </div>
           </div>
         </div>
       </div>
