@@ -97,6 +97,7 @@
     padding: 0 16px;
     white-space: nowrap;
     background: #17171a !important;
+    cursor: pointer;
   }
 
   .title_banner {
