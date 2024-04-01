@@ -1,6 +1,6 @@
 "use client";
 
-import { FaqItem } from "@/components/common";
+import { About, Faq } from "@/components/Layout";
 import Image from "next/image";
 
 export default function Home() {
@@ -29,7 +29,7 @@ export default function Home() {
         <div className="max-w-custom mx-auto relative z-30">
           <div className="min-h-[500px] pb-[90px] relative">
             {/* banner mobile */}
-            <div className="absolute w-full top-0 left-1/2 -translate-x-1/2 ">
+            <div className="absolute w-full top-0 left-1/2 -translate-x-1/2 block sm:hidden">
               <Image
                 src="/imgs/bg-mobile.png"
                 alt="icon mobile"
@@ -123,13 +123,13 @@ export default function Home() {
           </div>
 
           {/* box */}
-          <div className="max-w-custom mx-auto px-5 box">
+          <div className="max-w-custom mx-auto px-5 box pb-5 ms:pb-0">
             {/* slash mobile */}
             <div className="hidden"></div>
             {/* list */}
             <div className="relative flex justify-center flex-col sm:flex-row sm:h-[540px]">
               {/* line */}
-              <div className="absolute top-0 bottom-0 left-0 right-0 flex_center gap-8 hidden sm:block">
+              <div className="absolute top-0 bottom-0 left-0 right-0 flex_center gap-8 !hidden sm:!flex">
                 <div className="line_slash w-[200px]"></div>
                 <Image
                   src="/imgs/icon-coin.png"
@@ -154,10 +154,18 @@ export default function Home() {
                 <div className="line_slash w-[200px]"></div>
               </div>
 
+              <div className="air-mod-title airdrop-headline text-center pt-4 block sm:hidden">
+                <p className="line"></p>
+                <h2 className="story_container_wrapper_heading-mobile ">
+                  Time line
+                </h2>
+                <p className="line"></p>
+              </div>
+
               {/* item */}
               <div className="relative h-full">
                 <div className="mt-[63px] box_item_border border rounded-lg overflow-hidden">
-                  <div className="box_item sm:w-[360px]">
+                  <div className="box_item sm:w-[260px] md:w-[360px]">
                     {/* content */}
                     <div className="p-[24px] rounded-lg flex_center flex-col">
                       <div className="box_item_content_time">
@@ -174,7 +182,7 @@ export default function Home() {
               {/* item */}
               <div className="relative sm:pt-[280px]">
                 <div className="mt-[63px] box_item_border border rounded-lg overflow-hidden">
-                  <div className="box_item sm:w-[360px]">
+                  <div className="box_item sm:w-[260px] md:w-[360px]">
                     {/* content */}
                     <div className="p-[24px] rounded-lg flex_center flex-col">
                       <div className="box_item_content_time">Q2</div>
@@ -189,7 +197,7 @@ export default function Home() {
               {/* item */}
               <div className="relative">
                 <div className="mt-[63px] box_item_border border rounded-lg overflow-hidden">
-                  <div className="box_item sm:w-[360px]">
+                  <div className="box_item sm:w-[260px] md:w-[360px]">
                     {/* content */}
                     <div className="p-[24px] rounded-lg flex_center flex-col">
                       <div className="box_item_content_time">Q2</div>
@@ -203,78 +211,10 @@ export default function Home() {
           </div>
 
           {/* story */}
-          <div className="max-w-custom mx-auto pb-[111px] pt-[150px] box">
-            <div className="story_container relative">
-              <Image
-                src="/imgs/coin_overlay.png"
-                className="absolute right-[36px] top-[-130px]"
-                alt="coin_overlay icon"
-                width={261}
-                height={305}
-              />
-              <div className="story_container_wrapper">
-                <h2 className="story_container_wrapper_heading">About BWB</h2>
-                <h4 className="story_container_wrapper__sub_heading">
-                  Bitget Wallet, a world-leading Web3 wallet, has officially
-                  launched its very own ecosystem token BWB.
-                </h4>
-                <p className="story_container_wrapper_paragraph">
-                  As the foundational asset of the decentralized Bitget Wallet
-                  ecosystem, BWB empowers holders with exclusive benefits,
-                  including governance rights within our communities and
-                  eligibility for future rewards.
-                </p>
-                <p className="story_container_wrapper_paragraph">
-                  {`Boasting a legacy of over 5 years and a global user base of more
-                than 19 million... Bitget Wallet's introduction of BWB marks a
-                significant milestone in its brand lineage. Join us in
-                celebrating Bitget Wallet's innovative products as we continue
-                to unravel exciting plans for ecosystem growth.`}
-                </p>
-                <p className="story_container_wrapper_paragraph">
-                  Our goal is to onboard the next 1 billion users into Web3,
-                  opening the doors to a wealth of new assets and earning
-                  opportunities for all.
-                </p>
-              </div>
-            </div>
-          </div>
+          <About />
 
           {/* faq */}
-          <div className="max-w-custom mx-auto box sm:bg-black pb-[80px]">
-            <h2 className="text-2xl mb-5 text-white">FAQ</h2>
-
-            {/* list */}
-            <FaqItem
-              title={"What are BWB Points ?"}
-              data={[
-                "The BWB airdrop is awarded based on BWB Points. Following the airdrop campaign conclusion, users will be able to convert their BWB Points into BWB tokens.",
-              ]}
-            />
-            <FaqItem
-              title={"Which addresses are eligible for initial BWB Points ?"}
-              data={[
-                "· Retroactive airdrop for Bitget Wallet existing users",
-                "BWB Points are awarded based on a comprehensive assessment of users' Swap transactions, holdings, and participation in platform activities. Connect your wallet to the Bitget Wallet App event page to receive these airdrop points.",
-                "· Airdrop incentives for active on-chain traders",
-                "Airdrop incentives are awarded to users who have completed Swap transactions on prominent Web3 wallets, such as MetaMask, Trust Wallet, Coinbase Wallet, OKX Web3, imToken, Phantom, Rainbow, and TokenPocket. Download the Bitget Wallet App and import your wallet addresses to claim these airdrop points.",
-                "· Fair airdrops for new users",
-                "New users who download the Bitget Wallet App and create their first wallet during the event period will receive 50 BWB Points. These points can be unlocked after users make swap transactions for 3 days (at least $100 each day) within the event period.",
-              ]}
-            />
-            <FaqItem
-              title={"How do I claim my initial BWB Points ?"}
-              data={[
-                "If you find that you are eligible for initial BWB points, simply follow the instructions provided on the page to download the Bitget Wallet App and claim your points. You can accumulate points by participating in upcoming events. These points can be converted into BWB tokens upon event conclusion.",
-              ]}
-            />
-            <FaqItem
-              title={"How do I earn more BWB Points ?"}
-              data={[
-                "You can earn BWB Points daily by participating in various activities on the Bitget Wallet App, including inviting friends, maintaining wallet balance, and completing swap transactions.",
-              ]}
-            />
-          </div>
+          <Faq />
         </div>
       </div>
     </>

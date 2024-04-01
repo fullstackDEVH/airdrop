@@ -37,7 +37,7 @@ function Title({
 
 export default function MenuMobile({ name, path, childs }: IProps) {
   const [active, setIsActive] = useState<boolean>(false);
-    
+
   return (
     <div>
       <Title
@@ -66,6 +66,7 @@ export default function MenuMobile({ name, path, childs }: IProps) {
         >
           {childs.map((child) => (
             <Title
+              key={child.name}
               path={child.path ?? "#"}
               hasChild={child.childs?.length ? true : false}
               styles="px-[24px] py-[15px] flex justify-between items-center hover:bg-[#202024] cursor-pointer text-[14px] font-medium"

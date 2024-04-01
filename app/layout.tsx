@@ -10,6 +10,8 @@ import { mainnet, sepolia, base } from "wagmi/chains";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { injected, metaMask, safe, walletConnect } from "wagmi/connectors";
 import { Footer, Header } from "@/components/Layout";
+import About from "@/components/Layout/about";
+import FAQ from "@/components/Layout/faq";
 
 const queryClient = new QueryClient();
 const projectId = "4806c2e3b940cc1156e8262c2edee971";
